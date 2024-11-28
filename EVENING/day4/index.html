@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 100vh;
+            background-color: red;
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+        }
+        
+        .childOne{
+            background-color: yellow;
+            height: 300px;
+            width: 300px;
+        }
+        .childOne:hover{
+            /* transform: rotate(50deg); */
+            transition: 2s ;
+            transform: translateY(90px);
+            box-shadow: 10px 10px 10px black;
+        }
+        .childTwo{
+            background-color: green;
+            height: 300px;
+            width: 300px;
+        }
+        .childTwo:hover{
+            transition: 2s ;
+            transform: translateX(90px);
+            box-shadow: 10px 10px 10px black;
+        }
+        nav{
+            display: flex;
+        }
+        .menu ul{
+            display: flex;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+     <nav>
+        <div class="logo">
+            <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+
+        </div>
+     </nav>
+    <!-- flexbox -->
+     <div class="parent">
+        <div class="childOne">
+            
+        </div>
+        <div class="childTwo">
+
+        </div>
+     </div>
+     
+</body>
+</html>

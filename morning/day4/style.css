@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nosifer&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+font-family:  sans-serif;;
+}
+.parent{
+    background-image: url(https://www.nasa.gov/wp-content/uploads/2024/11/ksc-20171214-ph-sww01-0009orig.jpeg?w=2048);
+    background-size: cover;
+    /* background-color: blue; */
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.childOne:hover{
+    background-color: red;
+    transform: scale(1.4);
+    transform: rotate(50deg);
+    transition: 1s ease-in;
+}
+.childOne{
+    height: 400px;
+    width: 400px;
+    background-color: yellow;
+    
+}
+.childTwo:hover{
+    background-color: white; 
+}
+.childTwo p{
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    line-height: 19px;
+    text-decoration:line-through;
+}
+.childTwo{
+    box-sizing: border-box;
+    padding: 30px;
+    height: 400px;
+    width: 400px;
+    background-color: green;
+    /* backdrop-filter: blur(10px); */
+    /* filter: blur(10px); */
+}
+.navbar{
+    display: flex;
+  
+    align-items: center;
+    padding: 10px 100px;
+
+}
+.logo{
+    flex: 1;
+}
+.menus{
+    flex: 3;
+
+}
+.menus ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+.menus ul li a{
+    text-decoration: none;
+    color: red;
+    
+} 
+.menus ul li a{
+    padding  :  30px;
+    font-size: 22px;
+}
+.menus ul li a:hover{
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    background-color: rgb(213, 235, 255);
+}
