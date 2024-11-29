@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Animation</title>
+    <style>
+        /* Keyframes for bouncing animation */
+        @keyframes bounce {
+            0% {
+                transform: translateX(0) translateY(0) skew(10deg);
+            }
+
+            25% {
+                transform: translateX(250px) translateY(-150px);
+                box-shadow: 10px 10px 10px gray;
+            }
+
+            50% {
+                transform: translateX(400px) translateY(0);
+                box-shadow: 10px 10px 10px gray;
+                background-color: red;
+            }
+
+            75% {
+                transform: translateX(650px) translateY(-150px);
+                box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.329);
+            }
+
+            100% {
+                transform: translateX(800px) translateY(0);
+                box-shadow: 10px 10px 10px gray;
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+        /* Styling for animated ball */
+        .box1 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            animation: bounce 5s ease-in-out infinite alternate-reverse;
+            background-color: rgb(28, 111, 10);
+        }
+
+        body {
+            background-color: rgb(195, 250, 195);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+            animation: pulse 2s infinite, rotate 4s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home" style="height: 90vh;"></div>
+    <div class="circle"></div>
+    <div style="display: flex; gap: 10px;">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    </div>
+</body>
+
+</html>
