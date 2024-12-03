@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            /* height: 100vh; */
+            /* background-color: yellow; */
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+        }
+        .img{
+            height: 500px;
+            width: 500px;
+            background-image: url("https://images.pexels.com/photos/1227513/pexels-photo-1227513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+        }
+        @media (max-width:728px) {
+            .img{
+                height: 150px;
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+    </div>
+    <img src="./ronaldo.png" alt="">
+</body>
+</html>

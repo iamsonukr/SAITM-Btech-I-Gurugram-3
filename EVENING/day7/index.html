@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello this is JS</h1>
+    <script>
+        console.log("Hello world")
+        // Array
+        const fruits=['apple',"melons","papaya","mango"]
+        console.log(fruits)
+        fruits.push("Orange")
+        console.log(fruits)
+        fruits.pop()
+        console.log(fruits)
+
+        fruits.unshift("Banana")
+        console.log(fruits)
+        fruits.shift()
+        console.log(fruits)
+
+        const reversedFruits=fruits.reverse()
+        console.log(reversedFruits)
+
+        // sorted
+        const ages=[19,43,55, 87, 98,12, 11, 9, 65, 44]
+        console.log("This is sorted (ascending order) ages",ages.sort((a,b)=>a-b))
+     
+        console.log("This is sorted (Descending order) ages",ages.sort((a,b)=>b-a))
+    </script>
+</body>
+</html>

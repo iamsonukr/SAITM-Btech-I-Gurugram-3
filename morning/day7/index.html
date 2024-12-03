@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 300px;
+            background-color: orange;
+            box-shadow: 2px 2px 100px red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world</h1>
+
+    <h1 id="name">Hello </h1>
+    <div id="box"></div>
+    <!-- write your js here -->
+    <script>
+        
+
+        console.log("This is JS from frontend" )
+
+        // for(let i=0;i<10;i++){
+        //     console.log(i)
+        //     console.log("This is Sonu Kumar")
+        // }
+
+        // let i=0;
+        // while(i<11){
+        //     console.log(`This is while loop running ${i} times`)
+        //     i++;
+        // }
+
+        let j=1000;
+        do {
+            console.log(`This is do while running ${j} times`)
+            j++;
+        } while (j<11);
+
+
+        const changeName=()=>{
+            document.getElementById("name").style.color="yellow";
+        }
+        const changeBox=()=>{
+            document.getElementById("box").style.backgroundColor="red";
+            document.getElementById("box").style.borderRadius="50%";
+        }
+
+        setTimeout(()=>{
+            changeName()
+            changeBox()
+        },5000)
+
+        const fruits = ["apple","mango","pine","grapes","papaya","banana"];
+        console.log(fruits[2]);
+
+        // push
+        fruits.push("orange")
+        
+        // pop
+        // fruits.pop()
+        // fruits.pop()
+        // fruits.pop()
+
+        console.log("This is normal fruits ", fruits)
+        const sortedFruits=fruits.sort()
+        console.log("This is sorted fruits ",sortedFruits)
+
+        const reversedFruits=fruits.reverse()
+        console.log("This is reversed fruits", reversedFruits)
+
+        for(let x in fruits){
+            console.log(`I like to eat ${fruits[x]}`)
+        }
+
+        const ages=[77,10,65,11,9,43,66,76,90]
+        console.log(ages.sort())
+        // ascending order
+        console.log(ages.sort((a,b)=>a-b))
+        // descending order
+        console.log(ages.sort((a,b)=>b-a))
+
+        // mapping
+        ages.map((x)=>{
+            console.log(`I am ${x} years old using map 😀`)
+        })
+        // for each
+        ages.forEach((x)=>{
+            console.log(`I am ${x} years old using for each 🥲`)
+        })
+
+        // filter
+        const voters=ages.filter((age)=>age>18)
+        // console.log(voters)  
+
+        const retired=ages.filter((age)=>age>60)
+        // console.log(retired)
+
+        // Task 5
+        // filter an array (retired) for people above 60 
+        
+        const students=["Rohan","Mohan","Sohan","Rohit","Meera","Vaibhav"]
+        const slicedArray=students.slice(2,5)
+        console.log(slicedArray)
+
+        // Splice in array
+        console.log("Original array",students)
+        // const splicedArray=students.splice(2,2,"Selena","Uday")
+        console.log(students)
+
+        // include 
+        const checkName=students.includes("Suraj")
+        console.log(checkName)
+
+        const sampleNegative=students.at(-4)
+        console.log(sampleNegative)
+
+        // let
+        // var 
+        // const
+        const name="Sujeet"
+        name ="Sujeeta"
+        function myFunction(){
+            console.log(name)
+        }
+        myFunction()
+
+        let age=false
+
+        // Objects
+
+        let student={
+            name:"Sonu",
+            class:"XII",
+            rollNo:12,
+            marks:90
+        }
+        
+        const car={
+            name:"Audi",
+            model:"VI",
+            year:2011
+        }
+        console.log(Object.values(car))
+
+
+
+
+    </script>
+</body>
+</html>

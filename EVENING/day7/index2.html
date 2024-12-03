@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ['apple', "banana", "chiku", "dragon fruit", "melons", "papaya", "mango"]
+        const chckFruit = fruits.includes("melons")
+        const slicedFruits = fruits.slice(2, 5)
+        console.log("This is sliced fruits", slicedFruits)
+        const splicedData = fruits.splice(2, 2, "orange", "pineapple")
+        console.log("This is spliced data", fruits)
+
+        const sortedFruits = fruits.sort()
+        const descendedFruits = sortedFruits.reverse()
+        console.log(descendedFruits)
+
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(`I like ${fruits[i]} to eat `)
+        }
+
+        // for in 
+        console.log("Printing fruits using for in loop")
+        for (let x in fruits) {
+            console.log(fruits[x])
+        }
+
+        //map
+        console.log("Printing fruits using map")
+        const newFruits = fruits.map((item) => {
+            console.log(item)
+        })
+
+        // for each
+
+        console.log("Pring ting fruits using for each")
+        fruits.forEach((item) => {
+            console.log(item)
+        })
+
+        const ages = [14, 23, 54, 107, 33, 67, 12, 11, 9, 44]
+        const voters = ages.filter((age) => age > 17)
+        console.log(voters)
+
+        const student = {
+            name: "Rahul",
+            age: 19,
+            class: "XII",
+            rollNo: 12
+        }
+        console.log(student.name)
+
+        // object with funtion
+        const student2 = {
+            name: "Rahul",
+            age: 19,
+            class: "XII",
+            rollNo: 12,
+            aboutMe: function () {
+                console.log(`This is ${this.name}`)
+            }
+        }
+        student2.aboutMe()
+
+
+        //  Nested object for student
+
+        const student3 = {
+            name: "Rahul",
+            age: 19,
+            class: "XII",
+            rollNo: 12,
+            address: {
+                state: "Nagaland",
+                city: "Kohima",
+                pincode: "87211",
+                landmark: "Mountain"
+            }
+        }
+        console.log(student3.address.state)
+
+        const restaurant = {
+            name: "Pizza 99",
+            yearOfEst: 2009,
+            noOfEmployee: 22,
+            varity: ["vegetables", "south indians", "chinies"],
+            fruitsServed: ["Water melon", ...fruits],
+            timing: {
+                opening: "9:00AM",
+                closing: "11:00PM"
+            },
+            address: {
+                state: "West Bengal",
+                city: "Kolkata",
+                pincode: "700001",
+                landmark: "Park Street"
+            }
+        }
+        console.log(restaurant.fruitsServed)
+
+        // spread operator
+
+        let cars = ["audi", "mercedis", "Tata", "Range Rover"]
+        let bikes = ["Pulser", "R15", "Apache", "Bullet", "Kwasaki"]
+
+        let vehicles = [...cars, ...bikes]
+        console.log(vehicles)
+
+        // rest operator
+        const addTheNumbers=(...rest)=>{
+            const size=rest.length
+            let sum=0;
+            for(let i=0;i<size;i++){
+                sum+=rest[i];
+            }
+        }
+        addTheNumbers()
+
+
+    </script>
+</body>
+
+</html>
