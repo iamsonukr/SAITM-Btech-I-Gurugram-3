@@ -18,6 +18,13 @@
             padding: 10px 20px;
             background-color: white;
             color: black;
+            cursor: pointer;
+        }
+        button:hover{
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            cursor: pointer;
         }
         
 
@@ -26,7 +33,7 @@
 <body>
     <div class="section">
 
-        <p id="idSelector" class="classSelector"> Hello, World!</p>
+        <h1 id="idSelector" class="classSelector"> Hello, World!</h1>
         <button onclick="idSelector()">Use ID</button>
         <button onclick="classSelector()">Use Class</button>
         <button onclick="querySelectorDemo()">Use Query</button>
@@ -43,9 +50,9 @@
             document.getElementsByClassName('classSelector')[0].innerHTML="This is Sonu and I am using Class Selector"
         }
         function querySelectorDemo () {
-            document.querySelector('#idSelector').innerHTML="This is Sonu and I am using Query Selector"
+            document.querySelector('.classSelector').innerHTML="This is Sonu and I am using Query Selector"
         }
 
-    </script>
+    </script> 
 </body>
 </html>
