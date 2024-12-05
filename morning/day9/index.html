@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checkAge {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .bulb{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        #lightBulb{
+            height: 300px;
+            width: 300px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        .switch{
+            padding: 10px 20px;
+            /* border-radius: 10px; */
+            background-color: white;
+            border: 2px solid black;
+            /* margin: 20px; */
+
+        }
+        .switch:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bulb">
+        <div id="lightBulb">
+
+        </div>
+        <button class="switch" onclick="bulbSwith()">Switch</button>
+    </div>
+    
+    <div class="checkAge">
+
+        <h1 id="check">Check your eligiblity</h1>
+        <button onclick="checkAge(
+
+        )">Check Your age </button>
+
+    </div>
+    <script>
+
+        let status = false
+        const bulbSwith = () => {
+            const lightBulb = document.getElementById('lightBulb')
+            if (status == true) {
+                lightBulb.style.backgroundColor = 'gray'
+                lightBulb.style.boxShadow = '10px 10px 115px 10px gray'
+                status = false
+            }
+            else {
+                lightBulb.style.backgroundColor = 'yellow'
+                lightBulb.style.boxShadow = '10px 10px 100px 30px yellow'
+                status = true
+            }
+
+        }
+        const checkAge = () => {
+            let age = window.prompt("Please enter your age: ")
+            let check = document.getElementById("check")
+            if (age >= 18) {
+                check.innerHTML = "You are eligible to vote"
+            }
+            else {
+                check.innerHTML = "You are not eligible to vote"
+            }
+        }
+    </script>
+</body>
+
+</html>

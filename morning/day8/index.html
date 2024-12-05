@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box2{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 255, 201);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+
+        <h1>My name is <span id="name">Sonu Kumar</span></h1>
+        <div class="box2"></div>
+        <button onclick="changeName ()">Change your name </button>
+    </div>
+    <!-- task 6 -->
+     <!-- Create a div and a button
+
+     -> On clicking that button , the div should have padding of 100px , background color black
+
+     -> there should be a promt to take user input and show that input inside the box -->
+
+    <script>
+        const changeName=()=>{
+            // try {
+            // const name = prompt("Enter your name")
+            // document.getElementById("name").innerHTML=name
+            // let box=document.getElementById("box")
+            // box.style.backgroundColor="red"
+            // box.style.padding="100px"
+            // } catch (error) {
+            //     console.log(error)
+            // }
+            document.getElementsByClassName('box2')[0].style.backgroundColor="yellow"
+            
+            
+        }
+    </script>
+</body>
+</html>

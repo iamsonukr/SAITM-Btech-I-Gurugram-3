@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 10px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="section">
+
+        <p id="idSelector" class="classSelector"> Hello, World!</p>
+        <button onclick="idSelector()">Use ID</button>
+        <button onclick="classSelector()">Use Class</button>
+        <button onclick="querySelectorDemo()">Use Query</button>
+      
+    </div>
+    <script>
+        const idSelector = () => {
+           let element= document.getElementById('idSelector')
+           console.log(element)
+           element.innerHTML="This is Sonu I am using ID Selector"
+        }
+
+        const classSelector = () => {
+            document.getElementsByClassName('classSelector')[0].innerHTML="This is Sonu and I am using Class Selector"
+        }
+        function querySelectorDemo () {
+            document.querySelector('#idSelector').innerHTML="This is Sonu and I am using Query Selector"
+        }
+
+    </script>
+</body>
+</html>
