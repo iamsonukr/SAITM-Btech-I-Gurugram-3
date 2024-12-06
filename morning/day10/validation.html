@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    form input{
+        padding: 10px 20px;
+    }
+    form input:hover{
+        box-shadow: 5px 5px 103px 10px yellow;
+    }
+    form label{
+        font-size: 20px;
+    }
+    button{
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+    <form action="">
+        <h1>This is form validation</h1>
+        <label for="" >Username</label>
+        <input type="text" value="" id="username" >
+        <label for="" >Email</label>
+        <input type="email" value="" id="email" required >
+        <label for="" >Password</label>
+        <input type="password" value="" id="password" >
+        <label for="">Confirm Password</label>
+        <input type="password" value="" id="confirmPassword">
+        <button onclick="submitForm()" >Submit</button>
+    </form>
+    <script>
+        // this is example of arrow function
+        // function submitForm(){
+        //     var username = document.getElementById("username").value
+        // }
+        const validateEmail=(email)=>{
+            if(email.includes(".") && email.includes("@")){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+        const submitForm=()=>{
+            let username = document.getElementById("username").value
+            let password = document.getElementById("password").value
+            let confirmPassword = document.getElementById("confirmPassword").value
+            let email = document.getElementById('email').value
+            console.log("Checking the form")
+
+
+            if(!username || !password || !confirmPassword){
+                window.alert("Please enter all the input fields.")
+                return
+            }
+            if(!validateEmail(email)){
+                window.alert("Please enter a valid email address.")
+                return
+            }
+            if(password.length<8){
+                window.alert("Password must be at least 8 characters.")
+                return
+            }
+            if(password !== confirmPassword){   
+                window.alert("Password Do not match.")
+                return
+            }
+            else{
+                window.alert("Form submitted successfully.")
+            }
+        }
+    </script>
+</body>
+</html>

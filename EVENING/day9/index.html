@@ -31,12 +31,14 @@
             
         </div>
     </div>
+
+    <button  >Click Me</button>
     <script>
         const sunLight=()=>{
             let sun=document.getElementById('box')
             let sunTwo=document.getElementsByClassName('sunTwo')[0]
 
-            sun.addEventListener("mouseenter",()=>{
+            sun.addEventListener("drag",()=>{
             sun.style.boxShadow="10px 10px 100px 10px yellow";
             sun.style.backgroundColor="yellow";
             })
@@ -45,11 +47,19 @@
             sun.style.boxShadow="10px 10px 100px 10px gray";
             sun.style.backgroundColor="gray";
             })
+            // sun.addEventListener("click",()=>{
+            // sun.style.boxShadow="10px 10px 100px 10px gray";
+            // sun.style.backgroundColor="gray";
+            // })
 
             // sun two
             sunTwo.addEventListener("dragenter",()=>{
             sunTwo.style.boxShadow="10px 10px 100px 10px yellow";
             sunTwo.style.backgroundColor="yellow";
+            })
+            sunTwo.addEventListener( "click" ,()=>{
+            sunTwo.style.boxShadow="10px 10px 100px 10px gray";
+            sunTwo.style.backgroundColor="gray";
             })
            
            
