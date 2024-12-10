@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Circle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .circleOne {
+            border: 10px dotted #000; /* Fixed: removed "solid" as you can't have both solid and dotted */
+            border-radius: 50%; /* Added: to make it actually circular */
+            animation: rotate 3s linear infinite;
+            height: 400px;
+            width: 400px;
+            position: relative; /* Added: for proper positioning */
+        }
+
+        .circleTwo {
+      
+            border: 10px dotted #000; /* Fixed: removed "solid" as you can't have both solid and dotted */
+            border-radius: 50%; /* Added: to make it actually circular */
+            animation: rotate 3s linear infinite;
+            height: 200px;
+            width: 200px;
+            /* position: relative; / */
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+                border-color: red;
+            }
+            100% {
+                transform: rotate(360deg);
+                border-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circleOne">
+        <div class="circleTwo">
+        </div>
+    </div>
+</body>
+</html>
